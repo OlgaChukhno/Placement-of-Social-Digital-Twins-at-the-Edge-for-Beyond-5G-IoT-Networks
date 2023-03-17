@@ -1,0 +1,70 @@
+/*********************************************
+ * OPL 12.9.0.0 Data
+ * Author: olgac
+ *********************************************/ 
+
+nbServers=3; // number of edge servers
+nbSVES = 5; // number of SVESs/SDTs=number of devices
+nbSlots=3; // number of time slots
+
+//Lmax - maximum latency for every device
+//Lmax = [1,1,1,1,1];
+Lmax = [0.294955199525929	, 0.496573730236789	, 0.389993528718528	, 0.949326876612832	, 0.939816804747199];
+
+aCPU =240000; //CPU capability 
+aD = 2000; //DISK capability
+aRAM = 5400; //RAM capability
+thrCPU =0.05; //CPU threshold
+thrD = 0.1; //DISK threshold
+thrRAM = 0.04;  //RAM threshold
+CPU= [2000, 2500, 2500, 2000, 2000]; //CPU requirement 
+D= [10,20,30,50,50];  //DISK requirement 
+RAM= [10,20,30,50,50];  //RAM requirement 
+nbTypes=8; // number of device types
+
+// social graph ([0;1] values)
+DistSoc=[[0,1,1,0,1],
+		[1,0,0,0,0],
+		[1,0,0,0,0],
+		[0,0,0,0,0],
+		[1,0,0,0,0]];
+
+// social graph OOR
+DistSoc_OOR=[[0,0,0,0,1],
+		[0,0,0,0,0],
+		[0,0,0,0,0],
+		[0,0,0,0,0],
+		[1,0,0,0,0]];
+
+// social graph SOR		
+DistSoc_SOR=[[0,1,1,1,1],
+		[1,0,0,0,0],
+		[1,0,0,0,0],
+		[1,0,0,0,0],
+		[1,0,0,0,0]];
+
+// social graph POR	
+DistSoc_POR=[[0,1,1,0,1],
+		[1,0,0,0,0],
+		[1,0,0,0,0],
+		[0,0,0,0,0],
+		[1,0,0,0,0]];	
+		
+// social graph LOR		
+DistSoc_LOR=[[0,1,1,0,1],
+		[1,0,0,0,0],
+		[1,0,0,0,0],
+		[0,0,0,0,0],
+		[1,0,0,0,0]];					
+
+// Distances between devices and edge servers
+DistCost =[
+[[0.00,0.5,0.1], [0.5,0.00,0.5],[0.5,0.0,0.5],[0.5,0.00,0.5],[0.1,0.5,0.00]],
+[[0.00,0.9,0.0], [0.5,0.09,0.9],[0.5,0.0,0.5],[0.9,0.09,0.0],[0.9,0.5,0.00]],
+[[0.00,0.9,0.0], [0.5,0.09,0.9],[0.5,0.0,0.5],[0.9,0.09,0.0],[0.9,0.5,0.00]]];
+
+// Distances among edge servers
+DistServ = [[0.00,0.5,0.9],
+[0.5,0.00,0.5],
+[0.9,0.5,0.00] ];
+
