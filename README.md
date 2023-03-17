@@ -19,19 +19,23 @@ where the model is the name of the model file (i.e., SDT_model.mod), while data 
 Data can also be triggered from external files, e.g., from excel shits as follows":
 SheetConnection sheet("data.xls");
 
-As an example, you can run the model (SDT_model.mod) with the data from SDT_example.dat.This data file contains a few devices/SDTs, edge servers, and slots.
+**As an example,** you can run the model (SDT_model.mod) with the data from SDT_example.dat.This data file contains a few devices/SDTs, edge servers, and slots.
 One may extend the code by varying the input data only (the model is scalable).
 
-The results for the example data are as follows:
+**The results for the example data are as follows:**
 
-// solution (optimal) with objective 6.28
-SVEof= [[{1 5} {2 3 4} {}]
-         [{} {2 3} {1 4 5}]
-         [{} {2 3} {1 4 5}]]
-Total1Cost= [0.1 0.09 0.09]
-Total2Cost= [2 2 2]
+`// solution (optimal) with objective 6.28`
+`SVEof= [[{1 5} {2 3 4} {}]`
+
+`         [{} {2 3} {1 4 5}]`
+         
+`         [{} {2 3} {1 4 5}]]`
+         
+`Total1Cost= [0.1 0.09 0.09]`
+
+`Total2Cost= [2 2 2]`
 
 
-It means that SDT1 and SDT 5 are located on edge server 1, whereas SDT 2, SDT 3, and SDT 4 are placed on edge server 2 during time slot 1.
+_It means that SDT1 and SDT 5 are located on edge server 1, whereas SDT 2, SDT 3, and SDT 4 are placed on edge server 2 during time slot 1._
 
-During time slot 2 and time slot 3, SDT 2 and SDT 3 are placed on edge server 2, whereas SDT 1, SDT 4, and SDT 5 are located on edge server 3. 
+_During time slot 2 and time slot 3, SDT 2 and SDT 3 are placed on edge server 2, whereas SDT 1, SDT 4, and SDT 5 are located on edge server 3._
